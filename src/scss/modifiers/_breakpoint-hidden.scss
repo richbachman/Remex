@@ -1,0 +1,23 @@
+// Breakpoint Helpers
+//
+// The Breakpoint helpers modifiers allow you to hide an element on a specific breakpoint. The breakpoints variables
+// are defined in the _include-media.scss file. This file also allows for just about any variation of
+// media query to be written. For full include_media documentation, visit https://include-media.com.
+// Resize the browser to see these modifiers in action.
+//
+// Markup:
+// <div class="box {{modifier_class}}">Element</div>
+//
+// .phone__visible - Element visible on phone.
+// .tablet__visible - Element visible on phone and tablet.
+// .desktop__visible - Element visible on phone, tablet, and desktop.
+//
+// Styleguide Breakpoint Helpers
+
+@each $breakpoint, $break in $breakpoints {
+    .#{$breakpoint}__visible {
+        @include media('<=#{$breakpoint}') {
+            display: none;
+        }
+    }
+}

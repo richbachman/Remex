@@ -1,0 +1,38 @@
+//Default baseline pixel size for rem calculations
+$baseline-px: 16px !default;
+
+
+//Default sizes used for margins and padding
+$none: 0px;
+$xs: 5px;
+$sm: 10px;
+$md: 15px;
+$lg: 20px;
+$xl: 30px;
+$xxl: 50px;
+
+
+//Default sizes used for fonts
+$font-xs: 11;
+$font-sm: 13;
+$font-md: 16;
+$font-lg: 22;
+$font-xl: 34;
+$font-xxl: 42;
+
+
+//Default sizes used for border widths
+$border-xs: 1px;
+$border-sm: 2px;
+$border-md: 4px;
+$border-lg: 8px;
+$border-xl: 12px;
+$border-xxl: 16px;
+
+
+//Default sizes used for box-shadow
+$s1: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+$s2: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+$s3: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+$s4: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+$s5: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);

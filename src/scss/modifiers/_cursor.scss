@@ -1,0 +1,22 @@
+// Cursor
+//
+// The Cursor modifiers allow you to set an element hover cursor to either pointer or not-allowed.
+//
+// Markup:
+// <h1 class="{{modifier_class}}">Hover Element</h1>
+//
+// .cursor__pointer - Pointer.
+// .cursor__no - Not allowed.
+//
+// Styleguide Cursor
+
+$cursors: (
+    pointer: pointer,
+    no: not-allowed
+);
+
+@each $cursor, $var in $cursors {
+    .cursor__#{$cursor} {
+        cursor: $var;
+    }
+}

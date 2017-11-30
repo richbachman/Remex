@@ -1,0 +1,24 @@
+// Text Transform
+//
+// The Text Transform modifier allow you to change a text style to be lowercase, uppercase, or capitalize. 
+//
+// Markup:
+// <h3 class="{{modifier_class}}">Text Element</h3>
+//
+// .transform__upper - Uppercase text.
+// .transform__lower - Lowercase text.
+// .transform__cap - The first letter capitalized in this text.
+//
+// Styleguide Text Transform
+
+$textTransforms: (
+    upper: uppercase,
+    lower: lowercase,
+    cap: capitalize
+);
+
+@each $transform, $var in $textTransforms {
+    .transform__#{$transform} {
+        text-transform: $var;
+    }
+}

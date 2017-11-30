@@ -1,0 +1,40 @@
+// Opacity
+//
+// The Opacity modifiers allow you to set the opacity of an element. The framework accounts for all opacities from 0 to 1.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .o__0 - 0 opacity.
+// .o__1 - 0.1 opacity.
+// .o__2 - 0.2 opacity.
+// .o__3 - 0.3 opacity.
+// .o__4 - 0.4 opacity.
+// .o__5 - 0.5 opacity.
+// .o__6 - 0.6 opacity.
+// .o__7 - 0.7 opacity.
+// .o__8 - 0.8 opacity.
+// .o__9 - 0.9 opacity.
+// .o__10 - 1 opacity.
+//
+// Styleguide Opacity
+
+$opacityVariables: (
+    0: 0,
+    1: 0.1,
+    2: 0.2,
+    3: 0.3,
+    4: 0.4,
+    5: 0.5,
+    6: 0.6,
+    7: 0.7,
+    8: 0.8,
+    9: 0.9,
+    10: 1
+);
+
+@each $opacity, $var in $opacityVariables {
+    .o__#{$opacity} {
+        opacity: $var;
+    }
+}

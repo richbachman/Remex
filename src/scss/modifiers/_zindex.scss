@@ -1,0 +1,42 @@
+// Z-Index
+//
+// The Z-Index modifiers allow you to set the z-index of an element. The framework includes various z-index positions.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .z__1 - z-index of 1
+// .z__2 - z-index of 2
+// .z__3 - z-index of 3
+// .z__4 - z-index of 4
+// .z__5 - z-index of 5
+// .z__6 - z-index of 6
+// .z__6 - z-index of 7
+// .z__8 - z-index of 8
+// .z__9 - z-index of 9
+// .z__10 - z-index of 10
+// .z__99 - z-index of 99
+// .z__9999 - z-index of 9999
+//
+// Styleguide Z-Index
+
+$zVariables: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10,
+    99: 99,
+    9999: 9999
+);
+
+@each $indexes, $var in $zVariables {
+    .z__#{$indexes} {
+        z-index: $var;
+    }
+}

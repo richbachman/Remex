@@ -1,0 +1,34 @@
+// Vertical Aligment
+//
+// The Vertical Aligment modifiers allow you to set the vertical alignment of an element.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .v__align__baseline - baseline.
+// .v__align__sub - sub.
+// .v__align__super - super.
+// .v__align__text__top - text-top.
+// .v__align__text__bottom - text-bottom.
+// .v__align__middle - middle.
+// .v__align__top - top.
+// .v__align__bottom - bottom.
+//
+// Styleguide Vertical Aligment
+
+$vAligners: (
+    baseline: baseline,
+    sub: sub,
+    super: super,
+    text__top: text-top,
+    text__bottom: text-bottom,
+    middle: middle,
+    top: top,
+    bottom: bottom
+);
+
+@each $alignment, $var in $vAligners {
+    .v__align__#{$alignment} {
+        vertical-align: $var;
+    }
+}

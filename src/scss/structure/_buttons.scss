@@ -1,0 +1,107 @@
+// Buttons
+//
+// There are four predefined styles for buttons. Each style has an outline version as well. The width, font, font-size, font-weight, are all controlled with various modifier classes.
+//
+// Markup:
+// <a href="#" class="button {{modifier_class}}">Link Button</a>
+// <button class="{{modifier_class}}">Button Element</button>
+//
+// .outline - Outline button.
+// .secondary - Secondary button.
+// .error - Error button.
+// .success - Success button.
+//
+// Styleguide Buttons
+
+.button {
+    display: inline-block;
+}
+
+button, .button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+    border: 1px solid $primary;
+    background: $primary;
+    color: $white;
+    @include rem('padding', 10px 22px);
+    transition: all ease 0.1s;
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover {
+        cursor: pointer;
+        border-color: $primary-hover;
+        background: $primary-hover;
+    }
+    &:focus {
+        box-shadow: 0 0 0 3px $button-focus;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    &.outline {
+        border-color: $primary;
+        background: $white;
+        color: $primary;
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+
+    }
+    &.secondary {
+        border: 1px solid $neutral;
+        background: $neutral;
+        &:hover {
+            border-color: $neutral-hover;
+            background: $neutral-hover;
+        }
+        &.outline {
+            border-color: $neutral;
+            background: $white;
+            color: $neutral;
+            &:hover {
+                background: $neutral;
+                color: $white;
+            }
+    
+        }
+    }
+    &.error {
+        border: 1px solid $error;
+        background: $error;
+        &:hover {
+            border-color: $error-hover;
+            background: $error-hover;
+        }
+        &.outline {
+            border-color: $error;
+            background: $white;
+            color: $error;
+            &:hover {
+                background: $error;
+                color: $white;
+            }
+    
+        }
+    }
+    &.success {
+        border: 1px solid $success;
+        background: $success;
+        &:hover {
+            border-color: $success-hover;
+            background: $success-hover;
+        }
+        &.outline {
+            border-color: $success;
+            background: $white;
+            color: $success;
+            &:hover {
+                background: $success;
+                color: $white;
+            }
+    
+        }
+    }
+}

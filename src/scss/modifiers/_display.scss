@@ -1,0 +1,27 @@
+// Display
+//
+// The Display modifier includes basic CSS display styles including block, inline, inline-block, and none.
+// Note: The box class is just for this documentation only.
+//
+// Markup:
+// <div class="box {{modifier_class}}">Element</div>
+//
+// .display__block - block element.
+// .display__inline - inline element.
+// .display__inline__block - inline-block element.
+// .display__none - element will be hidden.
+//
+// Styleguide Display
+
+$displayOptions: (
+    block: block,
+    inline: inline,
+    inline__block: inline-block,
+    none: none
+);
+
+@each $display, $var in $displayOptions {
+    .display__#{$display} {
+        display: $var;
+    }
+}

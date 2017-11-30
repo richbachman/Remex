@@ -1,0 +1,29 @@
+// Box Shadow
+//
+// The Box Shadow modifiers allow you to set the box-shadow style of an element. Currently the framework includes five different shadow depths. These are based on Material Design standards.
+// Note: The example markup includes other modifiers.
+//
+// Markup:
+// <div class="{{modifier_class}} w__full p__lg m__bottom__xl">Shadow Container</div>
+//
+// .box__shadow__1 - Shadow depth 1.
+// .box__shadow__2 - Shadow depth 2.
+// .box__shadow__3 - Shadow depth 3.
+// .box__shadow__4 - Shadow depth 4.
+// .box__shadow__5 - Shadow depth 5.
+//
+// Styleguide Box Shadow
+
+$shadowSizes: (
+    1: $s1,
+    2: $s2,
+    3: $s3,
+    4: $s4,
+    5: $s5,
+);
+
+@each $shadow, $size in $shadowSizes {
+    .box__shadow__#{$shadow} {
+        box-shadow: $size;
+    }
+}

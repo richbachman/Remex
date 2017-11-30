@@ -1,0 +1,22 @@
+// Font Style
+//
+// The Font Style modifiers allow you to set the font style of an element. Currently the framework includes normal and italic font styles.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .f__style__normal - Normal font style.
+// .f__style__italic - Italic font style.
+//
+// Styleguide Font Style
+
+$fontStyles: (
+    normal: normal,
+    italic: italic
+);
+
+@each $fontstyle, $style in $fontStyles {
+    .f__style__#{$fontstyle} {
+        font-style: $style;
+    }
+}

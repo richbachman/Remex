@@ -1,0 +1,55 @@
+// Margin
+//
+// The Margin modifiers allow you to set the margin of an element. The margin can be set for all sides of
+// a container, or for just the top, right, bottom or left side.
+//
+// Markup:
+// <div class="box-empty {{modifier_class}}">Element</div>
+//
+// .m__none - No margin.
+// .m__xs - Extra small margin.
+// .m__sm - Small margin.
+// .m__md - Medium margin.
+// .m__lg - Large margin.
+// .m__xl - Extra large margin.
+// .m__xxl - Extra large margin.
+// .m__top__md - Medium top margin.
+// .m__right__md - Medium right margin.
+// .m__bottom__md - Medium bottom margin.
+// .m__left__md - Medium left margin.
+// .m__auto - Auto left and right margin.
+//
+// Styleguide Margin
+
+$marginSizes: (
+    none: $none,
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl
+);
+
+@each $margin, $size in $marginSizes {
+    .m__#{$margin} {
+        @include rem('margin', $size);
+    }
+    .m__top__#{$margin} {
+        @include rem('margin-top', $size);
+    }
+    .m__right__#{$margin} {
+        @include rem('margin-right', $size);
+    }
+    .m__bottom__#{$margin} {
+        @include rem('margin-bottom', $size);
+    }
+    .m__left__#{$margin} {
+        @include rem('margin-left', $size);
+    }
+}
+
+.m__auto {
+    margin-left: auto;
+    margin-right: auto;
+}

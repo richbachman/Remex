@@ -1,0 +1,54 @@
+// Height
+//
+// The Height modifiers allow you to set the height of an element. The heights are px/rem based, with the exception of auto and 100%.
+//
+// Markup:
+// <div class="box-empty {{modifier_class}}"></div>
+//
+// .h__px - 1px height.
+// .h__1 - 4px height.
+// .h__2 - 8px height.
+// .h__3 - 12px height.
+// .h__4 - 16px height.
+// .h__6 - 24px height.
+// .h__8 - 28px height.
+// .h__10 - 32px height.
+// .h__12 - 48px height.
+// .h__16 - 64px height.
+// .h__24 - 96px height.
+// .h__32 - 128px height.
+// .h__48 - 192px height.
+// .h__64 - 256px height.
+//
+// Styleguide Height
+
+$heightSizes: (
+    px: 1px,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    6: 24px,
+    8: 28px,
+    10: 32px,
+    12: 48px,
+    16: 64px,
+    24: 96px,
+    32: 128px,
+    48: 192px,
+    64: 256px
+);
+
+@each $height, $size in $heightSizes {
+    .h__#{$height} {
+        @include rem('height', $size);
+    }
+}
+
+.h__auto {
+    height: auto;
+}
+
+.h__full {
+    height: 100%;
+}

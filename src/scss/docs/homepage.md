@@ -1,5 +1,3 @@
-# Remex
-
 Welcome to Remex.
 
 Remex is a utility class style framework that can be used for rapid prototyping or as a starter stylesheet for a full site build.

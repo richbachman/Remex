@@ -1,0 +1,30 @@
+// Font Size
+//
+// The Font Size modifiers allow you to set the font size of an element. There are six built in font sizes that can be overridden with custom styles.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .fs__xs - Extra small font size.
+// .fs__sm - Small font size.
+// .fs__md - Medium font size.
+// .fs__lg - Large font size.
+// .fs__xl - Extra large font size.
+// .fs__xxl - Double extra large font size.
+//
+// Styleguide Font Size
+
+$fontSizes: (
+    xs: $font-xs,
+    sm: $font-sm,
+    md: $font-md,
+    lg: $font-lg,
+    xl: $font-xl,
+    xxl: $font-xxl,
+);
+
+@each $fontsize, $size in $fontSizes {
+    .fs__#{$fontsize} {
+        @include font-size($size);
+    }
+}

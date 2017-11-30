@@ -1,0 +1,49 @@
+// Padding
+//
+// The Padding modifiers allow you to set the padding of an element. The padding can be set for all sides of
+// a container, or for just the top, right, bottom or left side.
+//
+// Markup:
+// <div class="box-empty {{modifier_class}}">Element</div>
+//
+// .p__none - No padding.
+// .p__xs - Extra small padding.
+// .p__sm - Small padding.
+// .p__md - Medium padding.
+// .p__lg - Large padding.
+// .p__xl - Extra large padding.
+// .p__xxl - Extra large padding.
+// .p__top__md - Medium top padding.
+// .p__right__md - Medium right padding.
+// .p__bottom__md - Medium bottom padding.
+// .p__left__md - Medium left padding.
+//
+// Styleguide Padding
+
+$paddingSizes: (
+    none: $none,
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl
+);
+
+@each $padding, $size in $paddingSizes {
+    .p__#{$padding} {
+        @include rem('padding', $size);
+    }
+    .p__top__#{$padding} {
+        @include rem('padding-top', $size);
+    }
+    .p__right__#{$padding} {
+        @include rem('padding-right', $size);
+    }
+    .p__bottom__#{$padding} {
+        @include rem('padding-bottom', $size);
+    }
+    .p__left__#{$padding} {
+        @include rem('padding-left', $size);
+    }
+}

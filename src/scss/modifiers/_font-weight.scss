@@ -1,0 +1,40 @@
+// Font Weight
+//
+// The Font Weight modifiers allow you to set the font weight of an element. The framework includes enough font weights to accommodate most web fonts.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .fw__normal - Normal font weight.
+// .fw__strong - Strong font weight.
+// .fw__100 - 100 font weight.
+// .fw__200 - 200 font weight.
+// .fw__300 - 300 font weight.
+// .fw__400 - 400 font weight.
+// .fw__500 - 500 font weight.
+// .fw__600 - 600 font weight.
+// .fw__700 - 700 font weight.
+// .fw__800 - 800 font weight.
+// .fw__900 - 900 font weight.
+//
+// Styleguide Font Weight
+
+$fontWeights: (
+    normal: normal,
+    strong: strong,
+    100: 100,
+    200: 200,
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+    900: 900
+);
+
+@each $fontweight, $weight in $fontWeights {
+    .fw__#{$fontweight} {
+        font-weight: $weight;
+    }
+}

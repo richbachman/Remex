@@ -1,0 +1,8 @@
+{
+    "title": "Remex",
+    "source": "src/scss",
+    "destination":"styleguide/",
+    "homepage": "docs/homepage.md",
+    "builder": "node_modules/michelangelo/kss_styleguide/custom-template/",
+    "css": "../src/css/remex.css"
+}

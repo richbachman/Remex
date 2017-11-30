@@ -1,0 +1,23 @@
+// Float
+//
+// The Float modifiers allow you to set an element to float either left or right.
+// Note: The example markup includes other modifiers.
+//
+// Markup:
+// <div class="{{modifier_class}} width: 1_ 2px; p__lg">Floated Element</div>
+//
+// .float__left - Float left.
+// .float__right - Float right.
+//
+// Styleguide Float
+
+$floats: (
+    left: left,
+    right: right
+);
+
+@each $float, $var in $floats {
+    .float__#{$float} {
+        float: $var;
+    }
+}

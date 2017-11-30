@@ -1,0 +1,24 @@
+// Alignment
+//
+// Text alignment is pretty straight forward. These alignment modifiers can also be used to modify the contents of container elements.
+//
+// Markup:
+// <p class="{{modifier_class}}">Text Element</p>
+//
+// .align__left - Left alignment.
+// .align__center - Center alignment.
+// .align__right - Right alignment.
+//
+// Styleguide Alignment
+
+$aligners: (
+    left: left,
+    center: center,
+    right: right
+);
+
+@each $alignment, $var in $aligners {
+    .align__#{$alignment} {
+        text-align: $var;
+    }
+}

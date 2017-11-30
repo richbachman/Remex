@@ -1,0 +1,111 @@
+// Borders
+//
+// The Border modifier is a four part modifier including the border style, border position, border size,
+// and if the border is rounded. The border type and border size modifier must be used together. The border color is controlled by the $border color variable. That can
+// be adjusted in the _colors.scss file. The code below outlines each border type, and also includes
+// border size and rounded corner examples.
+//
+// Markup:
+// <div class="box {{modifier_class}}">Bordered Element</div>
+//
+// .border.border__sm - Adds a solid border to an element.
+// .border__dotted.border__sm - Adds a dotted border to an element.
+// .border__dashed.border__sm - Adds a dashed border to an element.
+// .border__double.border__sm - Adds a double border to an element.
+// .border__groove.border__sm - Adds a groove border to an element.
+// .border__ridge.border__sm - Adds a ridge border to an element.
+// .border__inset.border__sm - Adds a inset border to an element.
+// .border__outset.border__sm - Adds a outset border to an element.
+// .border.border__xs - Adds an extra small border to an element.
+// .border.border__sm - Adds an small border to an element.
+// .border.border__md - Adds an medium border to an element.
+// .border.border__lg - Adds an large border to an element.
+// .border.border__xl - Adds an extra large border to an element.
+// .border.border__xxl - Adds an double extra large border to an element.
+// .border.border__top__lg. - Adds an large top border to an element.
+// .border.border__right__lg. - Adds an large right border to an element.
+// .border.border__bottom__lg. - Adds an large bottom border to an element.
+// .border.border__left__lg. - Adds an large left border to an element.
+// .border.border__rounded__md - Element with medium rounded corners.
+// .border.border__rounded__top__left__md - Element with medium rounded top left corner.
+// .border.border__rounded__top__right__md - Element with medium rounded top right corner.
+// .border.border__rounded__bottom__left__md - Element with medium rounded bottom left corner.
+// .border.border__rounded__bottom__right__md - Element with medium rounded bottom right corner.
+//
+// Styleguide Borders
+
+$borderSizes: (
+    xs: $border-xs,
+    sm: $border-sm,
+    md: $border-md,
+    lg: $border-lg,
+    xl: $border-xl,
+    xxl: $border-xxl
+);
+
+.border {
+    border-style: solid;
+    border-color: $border;
+    border-width: 0;
+    &__dotted {
+        border-style: dotted;
+        border-width: 0;
+    }
+    &__dashed {
+        border-style: dashed;
+        border-width: 0;
+    }
+    &__double {
+        border-style: double;
+        border-width: 0;
+    }
+    &__groove {
+        border-style: groove;
+        border-width: 0;
+    }
+    &__ridge {
+        border-style: ridge;
+        border-width: 0;
+    }
+    &__inset {
+        border-style: inset;
+        border-width: 0;
+    }
+    &__outset {
+        border-style: outset;
+        border-width: 0;
+    }
+}
+
+@each $border, $size in $borderSizes {
+    .border__#{$border} {
+        @include rem('border-width', $size);
+    }
+    .border__top__#{$border} {
+        @include rem('border-top-width', $size);
+    }
+    .border__right__#{$border} {
+        @include rem('border-right-width', $size);
+    }
+    .border__bottom__#{$border} {
+        @include rem('border-bottom-width', $size);
+    }
+    .border__left__#{$border} {
+        @include rem('border-left-width', $size);
+    }
+    .border__rounded__#{$border} {
+        @include rem('border-radius', $size);
+    }
+    .border__rounded__top__left__#{$border} {
+        @include rem('border-top-left-radius', $size);
+    }
+    .border__rounded__top__right__#{$border} {
+        @include rem('border-top-right-radius', $size);
+    }
+    .border__rounded__bottom__left__#{$border} {
+        @include rem('border-bottom-left-radius', $size);
+    }
+    .border__rounded__bottom__right__#{$border} {
+        @include rem('border-bottom-right-radius', $size);
+    }
+}

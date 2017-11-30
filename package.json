@@ -1,0 +1,31 @@
+{
+  "name": "Remex",
+  "version": "0.0.1",
+  "description": "Utility class css framework.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "watch": "onchange 'src/scss/**/*.scss' -- npm run kss",
+    "kss": "kss --config kss-config.json"
+  },
+  "author": "Rich Bachman",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.3",
+    "kss": "^3.0.0-beta.18",
+    "michelangelo": "^0.6.1",
+    "onchange": "^3.2.1",
+    "run-sequence": "^2.2.0"
+  }
+}

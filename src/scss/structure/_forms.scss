@@ -1,0 +1,168 @@
+// Forms
+//
+// The framework includes default form styling for various input, select, textarea, radio, checkbox, and label
+// fields. The labes are stacked above each form field. This is a very simple/basic form setup so feel free
+// to customize.
+//
+// Markup: ../docs/forms.html
+//
+// Styleguide Forms
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="search"],
+input[type="url"],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    @include rem('padding', 10px 12px);
+    @include rem('margin', 0 0 15px);
+    border: 1px solid $border;
+    background: $white;
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    &:focus {
+        border-color: $neutral;
+    }
+}
+
+select {
+    background: url('data:image/svg+xml;utf8,<svg width="586" height="166" viewBox="0 0 586 166" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M0 0h586v166H0z"/><path d="M286.935 6.377C283.32 2.76 279.037.953 274.087.953H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 9.997 0 14.28 0 19.227c0 4.95 1.807 9.23 5.424 12.848L133.33 159.982c3.622 3.617 7.903 5.428 12.85 5.428s9.234-1.81 12.848-5.428L286.935 32.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.23-5.427-12.85z" fill="#000" fill-rule="nonzero"/></g></svg>') no-repeat 100% 19px $white;
+    background-size: 26px;
+}
+
+label {
+    @include rem('margin', 0 0 5px);
+}
+
+$checkbox-width: 16px;
+$radio-width: 16px;
+
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+    & + label {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        @include rem('padding', 6px 10px 3px ($radio-width + 10));
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border: 1px solid $border;
+            border-radius: 50%;
+            @include rem('margin', (-$checkbox-width/2) 0 0);
+            @include rem('width', $checkbox-width);
+            @include rem('height', $checkbox-width);
+        }
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            background: transparent;
+            border-radius: 50%;
+            @include rem('margin', (-$checkbox-width/2 + 4) 0 0);
+            @include rem('width', $checkbox-width - 6);
+            @include rem('height', $checkbox-width - 6);
+        }
+    }
+    &:disabled {
+        & + label {
+            cursor: not-allowed;
+            opacity: 0.5;
+            &:after {
+                background: $neutral;
+            }
+        }
+        &:checked + label {
+            &:after {
+                background: $neutral;
+            }
+        }
+    }
+    &:focus {
+        & + label {
+            &:before {
+                border-color: $neutral;
+            }
+        }
+    }
+    &:checked + label {
+        &:after {
+            background: $neutral;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    & + label {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        @include rem('padding', 6px 10px 3px ($checkbox-width + 10));
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border: 1px solid $border;
+            @include rem('margin', (-$checkbox-width/2) 0 0);
+            @include rem('width', $checkbox-width);
+            @include rem('height', $checkbox-width);
+        }
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 1px;
+            top: 50%;
+            @include rem('margin', (-$checkbox-width/2 + 1) 0 0);
+            @include rem('width', $checkbox-width);
+            @include rem('height', $checkbox-width);
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.608 240.608"><path d="M208.79 29.972l31.818 31.82L91.763 210.637 0 118.877l31.82-31.82 59.943 59.94L208.79 29.973z" fill="#ffffff"/></svg>') no-repeat center center;
+            background-size: ($checkbox-width - 4)
+        }
+    }
+    &:disabled {
+        & + label {
+            cursor: not-allowed;
+            opacity: 0.5;
+            &:before {
+                background: $neutral;
+            }
+        }
+        &:checked + label {
+            &:before {
+                background: $neutral;
+            }
+        }
+    }
+    &:focus {
+        & + label {
+            &:before {
+                border-color: $neutral;
+            }
+        }
+    }
+    &:checked + label {
+        &:before {
+            background: $neutral;
+        }
+    }
+}
